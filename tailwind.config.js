@@ -4,8 +4,6 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
-
-    // Or if using `src` directory:
     './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
@@ -34,16 +32,18 @@ module.exports = {
       },
       animation: {
         'spin-slow': 'spin 6s linear infinite',
+        'custom-ping': 'custom-ping 1s ease-out infinite',
+      },
+      keyframes: {
+        'custom-ping': {
+          '0%': { transform: 'scale(0)', opacity: '0.3' },
+          '100%': { transform: 'scale(1.5)', opacity: '0' },
+        },
       },
       fontFamily: {
         poppins: [`var(--font-poppins)`, 'sans-serif'],
         sora: [`var(--font-sora)`, 'sans-serif'],
       },
-    },
-  },
-  container: {
-    padding: {
-      DEFAULT: '15px',
     },
   },
   plugins: [require('tailwind-scrollbar')],

@@ -20,7 +20,7 @@ const ParticlesContainer = () => {
         fullScreen: {
           enable: false,
         },
-        fpsLimit: 120,
+        fpsLimit: 250,
         background: {
           color: {
             value: '',
@@ -29,7 +29,7 @@ const ParticlesContainer = () => {
         interactivity: {
           events: {
             onclick: {
-              enable: true,
+              enable: false, // true for mouse click bubbles
               mode: 'push'
             },
             onhover: {
@@ -75,7 +75,7 @@ const ParticlesContainer = () => {
               default: 'bounce',
             },
             random: false,
-            speed: 1,
+            speed: 2,
             straight: false,
           },
           number: {

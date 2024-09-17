@@ -1,3 +1,5 @@
+import Head from 'next/head'
+
 // icons
 import {
   FaHtml5,
@@ -89,7 +91,12 @@ const aboutData = [
 ];
 
 const About = () => {
-  return <div>About</div>;
+  return <div>
+    <Head>
+      <title>About | Portfolio</title>
+      <link rel="icon" href="https://img.icons8.com/?size=100&id=tOxaGAo81DLe&format=png&color=1A1A1A" />
+    </Head>
+    About</div>;
 };
 
 export default About;
